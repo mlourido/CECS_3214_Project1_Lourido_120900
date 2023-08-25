@@ -1,0 +1,270 @@
+:root{
+    --primary-color: #007bff;
+    --magenta: #D636C9;
+    --light-magenta:#D660CC;
+    --accent-color: #D6FA3F;
+    --light-lime: #e1fa71d5;
+    --background-color: #95c4ec;
+    --color-text:#043A6B;
+    --white-color: white;
+    --light-blue:#18b7be;
+    --lilac:#bca0e3;
+}
+
+/* Style the navbar */
+.topnav {
+    background-color: #F9F7F0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index:100;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+    display: block;
+    color: var(--color-text);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: var(--light-lime);
+    color: var(--light-magenta);
+}
+.topnav a.right-align {
+    float: right;
+}
+  
+/* Add an active class to highlight the current page */
+.topnav a.active {
+   /* background-color: #18b7be;
+   color: white;
+   */
+    background-color:var(--magenta);
+    color:var(--white-color);
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+body{
+    /*background-color: var(--background-color);*/
+    color: var(--color-text);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/* effect of change in color for background */
+@keyframes darkenBackground {
+    0%, 100% {
+        background-color: var(--background-color); /* Set your initial background color */
+    }
+    50% {
+        background-color: var(--lilac); /* Set your final/darker background color */
+    }
+}
+
+body {
+    animation: darkenBackground 6s linear infinite; /* Adjust duration and timing as needed */
+}
+
+.content-home {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--light-lime);
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.image-container {
+    width: 200px; /* Adjust the width as needed */
+    margin-left: auto; /* Move the image container to the right */
+    padding-right: 20px; /* Add padding between image and text */
+    text-align: center; /* Center the image horizontally */
+}
+
+.image-container img {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the entire image is visible within the circular shape */
+    object-position: center center; /* Centers the image within the circular shape */
+}
+
+.content-quote{
+    background-color: var(--light-lime);
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/* Style the table container */
+.table-container {
+    margin: 20px auto;
+    width: 50%;
+    color: var(--color-text);
+    
+}
+
+/* Style the table */
+.rounded {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Style table header */
+.rounded th {
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    padding: 10px 15px;
+    text-align: center;
+}
+
+/* Style table rows */
+.rounded td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Style odd rows with background color */
+.rounded tbody tr:nth-child(odd) {
+    background-color: #ecb7e8;
+}
+
+/* Style even rows with background color */
+.rounded tbody tr:nth-child(even) {
+    background-color: #b2cde7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.section {
+    background-color: rgba(90, 166, 241, 0.284); /* Light-colored section background */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: var(--light-magenta);
+    color: var(--accent-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/*Projects section */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project {
+    background-color: rgba(90, 166, 241, 0.284); /* Light-colored section background */
+    border: 1px solid #6989a1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.project-title {
+    color: var(--color-text);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.experience{
+    background-color: rgba(90, 166, 241, 0.284); /* Light-colored section background */
+    border: 1px solid #6989a1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.experience-title{
+    color: var(--color-text);
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.experience-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Style the footer */
+.footer {
+    background-color: var(--lilac);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Match font family */
+}
+
+.image-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-block img {
+    width: 50%;
+    height: auto;
+}
+
+.left {
+    order: 2; /* Move left content block below image */
+    
+}
+
+.right {
+    order: 1; /* Keep right content block above image */
+}
+
+/* Alternate the order of image blocks and content blocks */
+.container .image-block:nth-child(odd) {
+    flex-direction: row-reverse; /* Alternate order of left and right */
+    
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.185);
+    padding: 50px;
+    color: white;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 25px;
+
+
+}

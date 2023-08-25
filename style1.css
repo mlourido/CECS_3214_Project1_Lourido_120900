@@ -1,0 +1,341 @@
+:root{
+    --primary-color: #007bff;
+    --secondary-color: #D636C9;
+    --light-magenta:#D660CC;
+    --accent-color: #D6FA3F;
+    --light-lime: #E0FA71;
+    --background-color: #26537C;
+    --dark-blue:#043A6B;
+    --white-color: white;
+    --button-color:#18b7be;
+}
+
+body {
+    background-color: var(--background-color);
+  }
+  
+  .header {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+
+/* Style the navbar */
+.topnav {
+    background-color: #F9F7F0;
+    overflow: hidden;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    display: block;
+    color: #072A40;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+/* Add an active class to highlight the current page */
+.topnav a.active {
+   /* background-color: #18b7be;
+   color: white;
+   */
+    background-color:var(--primary-color);
+    color:var(--white-color);
+}
+
+.topnav a.right-align {
+    float: right;
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+
+
+/* effect of change in color for background */
+@keyframes darkenBackground {
+    0%, 100% {
+        background-color: #136183; /* Set your initial background color */
+    }
+    50% {
+        background-color: #0a3446; /* Set your final/darker background color */
+    }
+}
+
+body {
+    animation: darkenBackground 6s linear infinite; /* Adjust duration and timing as needed */
+}
+/* Animation for changing font color */
+@keyframes changeFontColor {
+    0%, 100% {
+        color: rgb(94, 229, 224); /* Set your initial font color */
+    }
+    50% {
+        color: #f0e2c3; /* Set your final font color */
+    }
+}
+.content {
+    animation: changeFontColor 6s linear infinite; /* Apply the animation to the text inside .content */
+}
+
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    /*-background-color: #1c1c1c; /* Dark background color */ 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f9f7f0; /* Light text color */
+}
+a{
+    color:aqua
+}
+/* Other styles */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.image-block {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-block img {
+    width: 50%;
+    height: auto;
+}
+
+.left {
+    order: 2; /* Move left content block below image */
+    
+}
+
+.right {
+    order: 1; /* Keep right content block above image */
+}
+
+/* Alternate the order of image blocks and content blocks */
+.container .image-block:nth-child(odd) {
+    flex-direction: row-reverse; /* Alternate order of left and right */
+    
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    color: white;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 25px;
+
+
+}
+
+.content-home, .content-quote {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    box-sizing: border-box;
+    width: 98%;
+    border-radius: 25px;
+    margin:10px;
+}
+
+  .image-container {
+    float: left;
+    margin: 0 20px 20px 0;
+    shape-outside: ellipse(50% 50% at 50% 50%); /* Create an oval shape */
+    clip-path: ellipse(50% 50% at 50% 50%);
+    width: 300px; /* Adjust the width of the image container */
+    height: 533px; /* Adjust the height of the image container for the oval effect */
+    position: relative;
+    
+}
+
+.image-container img {
+    max-width: 100%; /* Make sure the image doesn't exceed the container width */
+    max-height: 100%; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Style the table container */
+.table-container {
+    margin: 20px auto;
+    width: 50%;
+    color:#072A40;
+    
+}
+
+/* Style the table */
+.rounded {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Style table header */
+.rounded th {
+    background-color: #18b6bedf;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+/* Style table rows */
+.rounded td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Style odd rows with background color */
+.rounded tbody tr:nth-child(odd) {
+    background-color: #b5f2f6df;
+}
+
+/* Style even rows with background color */
+.rounded tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+
+.section {
+    background-color: rgba(255, 255, 255, 0.1); /* Light-colored section background */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.name{
+    color:var(--accent-color);
+}
+
+/* Adjust spacing and alignment for contact info */
+.contact-info {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Style the contact details and LinkedIn link */
+.contact-info span {
+    font-weight: bold;
+}
+
+.contact-info a {
+    color: #98d5f0;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #18b7be; /* Accent color for headings */
+    padding: 20px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+.section {
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #18b7be;
+    font-size: 24px; /* Increase font size for section title */
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color: #18b7be;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/*Projects section */
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #6989a1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.project-title {
+    color: #18b7be;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.experience{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #6989a1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.experience-title{
+    color: #18b7be;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.experience-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Style the footer */
+.footer {
+    background-color: #072A40;
+    color: #fff;
+    text-align: center;
+    padding: 10px; /* Adjust the padding as needed */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Match font family */
+}
