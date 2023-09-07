@@ -27,25 +27,50 @@ function updateTotalPrice() {
 
     const salesTax = totalPrice * salesTaxRate;
     const totalPriceWithTax = totalPrice + salesTax;
+
     // Display the total price in your HTML
     const totalDisplay = document.getElementById('total-price');
-    totalDisplay.textContent = `$${totalPrice.toFixed(2)}`;
-    totalDisplay.innerHTML = `Total: $${totalPrice.toFixed(2)}
-                            <br> Sales Tax: $${salesTax.toFixed(2)} 
-                            <br>Total with Tax: $${totalPriceWithTax.toFixed(2)}`;
+    totalDisplay.textContent = `Total: $${totalPrice.toFixed(2)}`;
+    //total price with tax
+    //totalDisplay.innerHTML = `Total: $${totalPrice.toFixed(2)}<br> Sales Tax: $${salesTax.toFixed(2)}<br>Total with Tax: $${totalPriceWithTax.toFixed(2)}`;
 }
 
 // Call the function initially to calculate the total price for the default state
 updateTotalPrice();
 
+//modification to show in additional html
 
-// JavaScript to handle the toggle button
-const toggleButtons = document.querySelectorAll('.toggle-button');
-const collapsibleContainers = document.querySelectorAll('.collapsible-container');
+function showSelectedItems() {
+    const selectedItems = [];
+    const selectedPrices = [];
 
-toggleButtons.forEach((toggleButton, index) => {
-    toggleButton.addEventListener('click', () => {
-        const container = collapsibleContainers[index];
-        container.style.display = container.style.display === 'none' ? 'block' : 'none';
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            const row = checkbox.closest('tr');
+            const name = row.querySelector('.data').textContent;
+            const priceText = row.querySelector('.price').textContent;
+            const price = parseFloat(priceText.replace('$', ''));
+
+            selectedItems.push(name);
+            selectedPrices.push(price);
+        }
     });
-});
+
+    // Create an object or array to store the selected items and prices
+    const selectedData = {
+        items: selectedItems,
+        prices: selectedPrices
+    };
+
+    // Convert the data to a JSON string
+    const selectedDataJSON = JSON.stringify(selectedData);
+
+    // Store the data in localStorage
+    localStorage.setItem('selectedData', selectedDataJSON);
+
+    // Redirect to the new HTML page
+    window.location.href = 'checkoutPage.html';
+}
+
+document.getElementById('show-selected').addEventListener('click', showSelectedItems);
+

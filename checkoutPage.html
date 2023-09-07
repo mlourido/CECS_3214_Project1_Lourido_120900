@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pageFormat.css">
+    <link rel="stylesheet" href="checkout.css">
+
+
+    <title>Checkout</title>
+</head>
+<body>
+
+    <!-- Button to go back to the previous page -->
+    <div class="button-container">
+        <a href="pcBuilder.html" id="back-button">Back to Store</a>
+    </div>
+
+
+    <div id="selected-items"></div>
+    <div id="total-price"></div>
+
+    <script>
+const selectedDataJSON = localStorage.getItem('selectedData');
+const selectedData = JSON.parse(selectedDataJSON);
+
+const selectedItemsElement = document.getElementById('selected-items');
+const totalPriceElement = document.getElementById('total-price');
+
+selectedItemsElement.innerHTML = "<h2>Selected Items:</h2>";
+selectedData.items.forEach((item, index) => {
+    const itemContainer = document.createElement('div');
+    itemContainer.classList.add('item-container');
+
+    const itemName = document.createElement('p');
+    itemName.classList.add('item-name');
+    itemName.textContent = item;
+
+    const itemPrice = document.createElement('p');
+    itemPrice.classList.add('item-price');
+    itemPrice.textContent = `$${selectedData.prices[index]}`;
+
+    itemContainer.appendChild(itemName);
+    itemContainer.appendChild(itemPrice);
+    selectedItemsElement.appendChild(itemContainer);
+});
+
+// Calculate total price
+const totalPrice = selectedData.prices.reduce((acc, price) => acc + price, 0);
+
+// Add sales tax to total price
+const salesTaxRate = 0.115;
+const salesTax = totalPrice * salesTaxRate;
+const totalPriceWithTax = totalPrice + salesTax;
+
+// Append the total price and sales tax to the element
+totalPriceElement.innerHTML = `<h3>Total Price: $${totalPrice.toFixed(2)}</h3>`;
+totalPriceElement.innerHTML += `<h3>Sales Tax: $${salesTax.toFixed(2)}</h3>`;
+totalPriceElement.innerHTML += `<h3>Total Price with Tax: $${totalPriceWithTax.toFixed(2)}</h3>`;
+
+</script>
+
+</body>
+<footer class="footer">
+    <p>&copy; 2023 Monique Lourido Martinez. All rights reserved.</p>
+    <p>Homework #2 for CECS 3214-80 FA23</p>
+</footer>
+
+</html>

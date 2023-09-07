@@ -1,0 +1,67 @@
+
+/* Style the heading */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+
+#back-button {
+    
+    padding-top: 20px; /* Add space from the top */
+    text-align: left; /* Center the button */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners */
+    color: #ddd;
+    background-color: #f15e28; /* Button background color */
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+
+/* Style the selected items container */
+#selected-items {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left; /* Center the content in selected items container */
+}
+
+/* Style the total price container */
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: right; /* Center the content in total price container */
+}
+
+/* Style for selected items */
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.item-name {
+    width: 60%;
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.item-price {
+    width: 40%;
+    text-align: right;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
