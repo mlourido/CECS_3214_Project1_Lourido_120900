@@ -1,0 +1,101 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="textbooks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book1">
+          <xs:annotation>
+            <xs:documentation>Arduino Cookbook</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element name="author">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="first_name"/>
+                    <xs:element type="xs:string" name="last_name"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publisher">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="website"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:short" name="year_of_publication"/>
+              <xs:element type="xs:string" name="ISBN"/>
+              <xs:element type="xs:string" name="book_website"/>
+              <xs:element type="xs:string" name="edition"/>
+              <xs:element type="xs:string" name="cover_type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="book2">
+          <xs:annotation>
+            <xs:documentation>Digital Signal Processing</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element name="author">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="first_name"/>
+                    <xs:element type="xs:string" name="last_name"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publisher">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="website"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:short" name="year_of_publication"/>
+              <xs:element type="xs:string" name="ISBN"/>
+              <xs:element type="xs:string" name="book_website"/>
+              <xs:element type="xs:string" name="edition"/>
+              <xs:element type="xs:string" name="cover_type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="book3">
+          <xs:annotation>
+            <xs:documentation>Beginning MATLAB and Simulink: From Beginner to Pro</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element name="author">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="first_name"/>
+                    <xs:element type="xs:string" name="last_name"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="publisher">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:string" name="website"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:short" name="year_of_publication"/>
+              <xs:element type="xs:string" name="ISBN"/>
+              <xs:element type="xs:string" name="book_website"/>
+              <xs:element type="xs:string" name="edition"/>
+              <xs:element type="xs:string" name="cover_type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

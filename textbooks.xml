@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="textbook.xsl"?>
+<textbooks>
+    <book1>
+        <title>Arduino Cookbook</title>
+        <author>
+            <first_name>Michael</first_name>
+            <last_name> Margolis</last_name>
+        </author>
+        <publisher>
+            <name>O'Reilly Media, Inc.</name>
+            <website>https://www.oreilly.com/</website>
+        </publisher>
+        <year_of_publication>2011</year_of_publication>
+        <ISBN>978-0-596-80247-9</ISBN>
+        <book_website>https://www.cengage.com/c/industrial-organizational-psychology-an-applied-approach-8e-aamodt/9781305118423/?searchIsbn=978-1305118423</book_website>
+        <edition>1st</edition>
+        <cover_type>Papperback</cover_type>
+    </book1>
+    <book2>
+        <title>Digital Signal Processing</title>
+        <author>
+            <first_name>Sanjit</first_name>
+            <last_name>Mitra</last_name>
+        </author>
+        <publisher>
+            <name>McGraw Hill</name>
+            <website>https://www.mheducation.com/</website>
+        </publisher>
+        <year_of_publication>2010</year_of_publication>
+        <ISBN>: 978-0077366766</ISBN>
+        <book_website>https://www.amazon.com/Digital-Signal-Processing-Student-ROM/dp/007736676X</book_website>
+        <edition>4th</edition>
+        <cover_type>Hardcover</cover_type>
+    </book2>
+    <book3>
+        <title>Beginning MATLAB and Simulink: From Beginner to Pro</title>
+        <author>
+            <first_name>Sulaymon </first_name>
+            <last_name> Eshkabilov </last_name>
+        </author>
+        <publisher>
+            <name>Apress</name>
+            <website>https://www.apress.com/us</website>
+        </publisher>
+        <year_of_publication>2022</year_of_publication>
+        <ISBN>978-1484287477</ISBN>
+        <book_website>https://link.springer.com/book/10.1007/978-1-4842-8748-4</book_website>
+        <edition>2nd</edition>
+        <cover_type>eBook</cover_type>
+    </book3>
+</textbooks>
